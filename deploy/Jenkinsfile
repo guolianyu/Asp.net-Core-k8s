@@ -1,0 +1,40 @@
+podTemplate(label: 'jnlp-slave', cloud: 'kubernetes', containers: [
+    containerTemplate(
+        name: 'jnlp', 
+        image: '192.168.161.151/ops/jenkins-slave', 
+        alwaysPullImage: true 
+    ),
+  ],
+  volumes: [
+    hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock'),
+    hostPathVolume(mountPath: '/usr/bin/docker', hostPath: '/usr/bin/docker'),
+    hostPathVolume(mountPath: '/usr/local/jdk', hostPath: '/usr/local/jdk'),
+    hostPathVolume(mountPath: '/usr/local/maven', hostPath: '/usr/local/maven'),
+  ],
+  imagePullSecrets: ['registry-pull-secret'],
+) 
+{
+  node("jnlp-slave"){
+      stage('Git Checkout'){
+         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '8ff98f83-997e-41f8-b2fb-ce1719282021', url: 'git@192.168.161.153:Team/TestProject.git']]])
+      }
+      stage('Unit Testing'){
+      	echo "Unit Testing..."
+      }
+      stage('Build and Push Image'){
+          sh '''
+          #echo "192.168.0.211 reg.aliangedu.com" >> /etc/hosts
+          docker login -u louie -p Gly3033432 192.168.161.151
+          docker build -t 192.168.161.151/projectdemo/testprodemo:latest -f WebApplication1/Dockerfile .
+          docker push 192.168.161.151/projectdemo/testprodemo:latest
+          '''
+      }
+      stage('Deploy to K8S'){
+          kubernetesDeploy configs: 'deploy/deploy.yaml', kubeConfig: [path: ''], kubeconfigId: '1cb90ef1-4a7f-40c9-a6dd-bb6994017da4', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
+      }
+      stage('Testing'){
+          echo "Testing..."
+      }
+  }
+}
+

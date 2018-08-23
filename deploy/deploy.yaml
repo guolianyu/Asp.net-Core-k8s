@@ -1,0 +1,45 @@
+apiVersion: extensions/v1beta1 
+kind: Deployment
+metadata:
+  name: blog-solo
+  namespace: blog
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      project: blog
+      app: solo
+  template:
+    metadata:
+      labels:
+        project: blog
+        app: solo
+    spec:
+      imagePullSecrets:
+      - name: registry-pull-secret
+      containers:
+      - name: solo
+        image: 192.168.161.151/projectdemo/testprodemo:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+          name: web
+          protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: blog-solo
+  namespace: blog
+  labels:
+    project: blog
+    app: solo
+spec:
+  selector:
+    project: blog
+    app: solo
+  ports:
+  - name: web
+    port: 80
+    targetPort: 80
+  type: NodePort

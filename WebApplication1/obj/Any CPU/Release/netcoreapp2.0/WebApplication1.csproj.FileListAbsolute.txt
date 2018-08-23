@@ -1,0 +1,10 @@
+E:\ND-GLY\NETCore\test\WebApplication1\bin\Any CPU\Release\netcoreapp2.0\WebApplication1.deps.json
+E:\ND-GLY\NETCore\test\WebApplication1\bin\Any CPU\Release\netcoreapp2.0\WebApplication1.runtimeconfig.json
+E:\ND-GLY\NETCore\test\WebApplication1\bin\Any CPU\Release\netcoreapp2.0\WebApplication1.runtimeconfig.dev.json
+E:\ND-GLY\NETCore\test\WebApplication1\bin\Any CPU\Release\netcoreapp2.0\WebApplication1.dll
+E:\ND-GLY\NETCore\test\WebApplication1\bin\Any CPU\Release\netcoreapp2.0\WebApplication1.pdb
+E:\ND-GLY\NETCore\test\WebApplication1\obj\Any CPU\Release\netcoreapp2.0\WebApplication1.csproj.CoreCompileInputs.cache
+E:\ND-GLY\NETCore\test\WebApplication1\obj\Any CPU\Release\netcoreapp2.0\WebApplication1.AssemblyInfoInputs.cache
+E:\ND-GLY\NETCore\test\WebApplication1\obj\Any CPU\Release\netcoreapp2.0\WebApplication1.AssemblyInfo.cs
+E:\ND-GLY\NETCore\test\WebApplication1\obj\Any CPU\Release\netcoreapp2.0\WebApplication1.dll
+E:\ND-GLY\NETCore\test\WebApplication1\obj\Any CPU\Release\netcoreapp2.0\WebApplication1.pdb
