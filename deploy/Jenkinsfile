@@ -23,7 +23,6 @@ podTemplate(label: 'jnlp-slave', cloud: 'kubernetes', containers: [
       }
       stage('Build and Push Image'){
           sh '''
-          #echo "192.168.0.211 reg.aliangedu.com" >> /etc/hosts
           docker login -u louie -p 密码 192.168.161.151
           docker build -t 192.168.161.151/projectdemo/testprodemo:latest -f WebApplication1/Dockerfile .
           docker push 192.168.161.151/projectdemo/testprodemo:latest
