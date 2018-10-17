@@ -1,0 +1,11 @@
+E:\ND-GLY\NETCore\kubernetes\Asp.net-Core-k8s\WebApplication1\bin\Debug\netcoreapp2.0\LGK8S.deps.json
+E:\ND-GLY\NETCore\kubernetes\Asp.net-Core-k8s\WebApplication1\bin\Debug\netcoreapp2.0\LGK8S.runtimeconfig.json
+E:\ND-GLY\NETCore\kubernetes\Asp.net-Core-k8s\WebApplication1\bin\Debug\netcoreapp2.0\LGK8S.runtimeconfig.dev.json
+E:\ND-GLY\NETCore\kubernetes\Asp.net-Core-k8s\WebApplication1\bin\Debug\netcoreapp2.0\LGK8S.dll
+E:\ND-GLY\NETCore\kubernetes\Asp.net-Core-k8s\WebApplication1\bin\Debug\netcoreapp2.0\LGK8S.pdb
+E:\ND-GLY\NETCore\kubernetes\Asp.net-Core-k8s\WebApplication1\obj\Debug\netcoreapp2.0\LGK8S.csprojAssemblyReference.cache
+E:\ND-GLY\NETCore\kubernetes\Asp.net-Core-k8s\WebApplication1\obj\Debug\netcoreapp2.0\LGK8S.csproj.CoreCompileInputs.cache
+E:\ND-GLY\NETCore\kubernetes\Asp.net-Core-k8s\WebApplication1\obj\Debug\netcoreapp2.0\LGK8S.AssemblyInfoInputs.cache
+E:\ND-GLY\NETCore\kubernetes\Asp.net-Core-k8s\WebApplication1\obj\Debug\netcoreapp2.0\LGK8S.AssemblyInfo.cs
+E:\ND-GLY\NETCore\kubernetes\Asp.net-Core-k8s\WebApplication1\obj\Debug\netcoreapp2.0\LGK8S.dll
+E:\ND-GLY\NETCore\kubernetes\Asp.net-Core-k8s\WebApplication1\obj\Debug\netcoreapp2.0\LGK8S.pdb
